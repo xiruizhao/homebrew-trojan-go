@@ -9,7 +9,7 @@ if grep -q "version \"${TAG#v}\"" trojan-go.rb; then
 fi
 DOWNLOAD_URL="https://github.com/p4gefau1t/trojan-go/releases/download/${TAG}/trojan-go-darwin-amd64.zip"
 SHASUM=$(curl -sSL "$DOWNLOAD_URL" | sha256sum -b | cut -d' ' -f1)
-sed -e "s#^  url.*#  url \"$DOWNLOAD_URL\"#" -e "s/^  version.*/  version \"${TAG#v}\"/" -e "s/^  sha256.*/  sha256 \"${SHASUM}\"/" -i '' trojan-go.rb
+sed -e "s#^  url.*#  url \"$DOWNLOAD_URL\"#" -e "s/^  version.*/  version \"${TAG#v}\"/" -e "s/^  sha256.*/  sha256 \"${SHASUM}\"/" -i trojan-go.rb
 git config user.name github-actions
 git config user.email github-actions@github.com
 git commit -am "trojan-go ${TAG}"
