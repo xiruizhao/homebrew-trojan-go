@@ -5,9 +5,9 @@ class TrojanGo < Formula
   desc "A Trojan proxy written in Go. An unidentifiable mechanism that helps you bypass GFW."
   homepage "https://p4gefau1t.github.io/trojan-go"
   # download binary from upstream directly
-  url "https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.0/trojan-go-darwin-amd64.zip"
-  version "0.10.0"
-  sha256 "81d928d3bf37cd418a24ab96a6bb7c0f3f9797864e3d9729e859923642d39525"
+  url "https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.4/trojan-go-darwin-amd64.zip"
+  version "0.10.4"
+  sha256 "37125bbf582a1716c5a349ab6a99c247d7111399d93bc8332dbbb8480f0906f7"
   license "GPL-3.0"
 
   def install
